@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.btsciel.td_convertisseur.HelloController">
    <TextField fx:id="textField_Haut" layoutX="49.0" layoutY="96.0" prefHeight="46.0" prefWidth="190.0" />
    <TextField fx:id="textField_Final" disable="true" layoutX="49.0" layoutY="251.0" prefHeight="46.0" prefWidth="190.0" />
    <ComboBox fx:id="comboSelection" layoutX="288.0" layoutY="185.0" prefWidth="150.0" />
-   <Label layoutX="162.0" layoutY="34.0" prefHeight="46.0" prefWidth="171.0" text="Convertisseur Euro-Dollars" />
-   <Label fx:id="label_Haut" layoutX="251.0" layoutY="164.0" prefHeight="46.0" prefWidth="43.0"/>
-   <Label fx:id="label_Bas" layoutX="251.0" layoutY="309.0" prefHeight="45.0" prefWidth="68.0"/>
-   <Button fx:id="boutonConvertion" layoutX="115.0" layoutY="166.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="59.0" stylesheets="@../../../appstyle/css.css">
-      <cursor>
-         <Cursor fx:constant="MOVE" />
-      </cursor></Button>
+   <Label layoutX="162.0" layoutY="34.0" prefHeight="46.0" prefWidth="171.0" text="Convertisseur monnaie" />
+   <Label fx:id="label_Haut" layoutX="251.0" layoutY="164.0" prefHeight="46.0" prefWidth="43.0" />
+   <Label fx:id="label_Bas" layoutX="251.0" layoutY="309.0" prefHeight="45.0" prefWidth="68.0" />
+   <Button fx:id="boutonConvertion" layoutX="115.0" layoutY="166.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="61.0" stylesheets="@../../../appstyle/css.css" underline="true">
+      <graphic>
+         <ImageView href="../images/convertir.png" fitHeight="49.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" />
+      </graphic></Button>
 </AnchorPane>

@@ -53,10 +53,10 @@ public class HelloController implements Initializable {
         conversionDevise.add(new ConversionDevice("Dollars/Euro", "Dollars", "Euro", 1.11));
     }
 
-    /*public void initConvertion(ConversionDevice conversionDevise) {
+    public void initConvertion(ConversionDevice conversionDevise) {
         label_Haut.setText(conversionDevise.getSource());
-        label_Final.setText(conversionDevise.getCible());
-    }*/
+        label_Bas.setText(conversionDevise.getCible());
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -64,7 +64,7 @@ public class HelloController implements Initializable {
         fabriqueDonnees();
         comboSelection.getItems().addAll(conversionDevise);
         comboSelection.setValue(conversionDevise.get(0));
-        //initConvertion(conversionDevise.get(0));
+        initConvertion(conversionDevise.get(0));
         boutonConvertion.setOnAction(event -> Convertion());
         comboSelection.setOnAction(event -> comboSelection());
     }
