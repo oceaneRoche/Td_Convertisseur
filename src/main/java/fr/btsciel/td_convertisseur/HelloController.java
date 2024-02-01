@@ -27,7 +27,6 @@ public class HelloController implements Initializable {
         try {
             ConversionDevice devise = comboSelection.getValue();
             double valeur_Conversion;
-
             if (textField_Haut.isDisabled()) {
                 valeur_Conversion = Double.parseDouble(textField_Final.getText()) / devise.getTaux();
                 textField_Haut.setText(df.format(valeur_Conversion));
@@ -35,9 +34,7 @@ public class HelloController implements Initializable {
                 valeur_Conversion = Double.parseDouble(textField_Haut.getText()) * devise.getTaux();
                 textField_Final.setText(df.format(valeur_Conversion));
             }
-
         } catch (NumberFormatException e) {
-            //alerteFormat();
         }
     }
 
