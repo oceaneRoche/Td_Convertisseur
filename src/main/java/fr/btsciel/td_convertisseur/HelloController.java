@@ -27,6 +27,7 @@ public class HelloController implements Initializable {
         try {
             ConversionDevice devise = comboSelection.getValue();
             double valeur_Conversion;
+
             if (textField_Haut.isDisabled()) {
                 valeur_Conversion = Double.parseDouble(textField_Final.getText()) / devise.getTaux();
                 textField_Haut.setText(df.format(valeur_Conversion));
@@ -34,10 +35,12 @@ public class HelloController implements Initializable {
                 valeur_Conversion = Double.parseDouble(textField_Haut.getText()) * devise.getTaux();
                 textField_Final.setText(df.format(valeur_Conversion));
             }
+
         } catch (NumberFormatException e) {
             //alerteFormat();
         }
     }
+
     public void comboSelection() {
         ConversionDevice devise = comboSelection.getValue();
         boolean element = comboSelection.getSelectionModel().getSelectedIndex() % 2 == 1;
@@ -48,25 +51,24 @@ public class HelloController implements Initializable {
         textField_Haut.clear();
         textField_Final.clear();
     }
-
     public void fabriqueDonnees() {
         conversionDevise.add(new ConversionDevice("Euro/Dollars", "Euro", "Dollars US", 1.11));
         conversionDevise.add(new ConversionDevice("Dollars/Euro", "Dollars", "Euro", 1.11));
     }
 
-    public void initConvertion(ConversionDevice conversionDevise) {
+    /*public void initConvertion(ConversionDevice conversionDevise) {
         label_Haut.setText(conversionDevise.getSource());
-        label_Bas.setText(conversionDevise.getCible());
-    }
+        label_Final.setText(conversionDevise.getCible());
+    }*/
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         rotation = new RotateTransition(Duration.seconds(0.5), boutonConvertion);
+        fabriqueDonnees();
         comboSelection.getItems().addAll(conversionDevise);
         comboSelection.setValue(conversionDevise.get(0));
-        initConvertion(conversionDevise.get(0));
+        //initConvertion(conversionDevise.get(0));
         boutonConvertion.setOnAction(event -> Convertion());
         comboSelection.setOnAction(event -> comboSelection());
-        fabriqueDonnees();
     }
 }

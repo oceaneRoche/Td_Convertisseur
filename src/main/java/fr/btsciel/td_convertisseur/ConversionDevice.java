@@ -4,7 +4,11 @@ public class ConversionDevice {
     private String prompt, source, cible;
     private double taux;
 
-    public ConversionDevice(String s, String euro, String dollarsUs, double v) {
+    public ConversionDevice(String prompt, String source, String cible, double taux) {
+        this.prompt=prompt;
+        this.source=source;
+        this.cible=cible;
+        this.taux=taux;
     }
 
     public String getPrompt() {
