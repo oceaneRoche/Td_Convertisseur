@@ -63,7 +63,6 @@ public class HelloController implements Initializable {
                 }
             }
         } catch (NumberFormatException ignored) {
-            // Gérer l'exception (éventuellement log ou afficher un message)
         }
     }
 
