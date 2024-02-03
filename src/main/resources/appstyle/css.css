@@ -3,3 +3,10 @@
             url(../images/convertir.png);
     -fx-background-size: stretch;
 }
+#anchorPane{
+    -fx-background-size: stretch;
+    -fx-background-color: #656161;
+}
+#comboSelection{
+    -fx-background-color: #b5b0b0;
+}

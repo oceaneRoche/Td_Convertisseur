@@ -2,8 +2,10 @@ package fr.btsciel.td_convertisseur;
 
 import javafx.animation.RotateTransition;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -86,8 +88,8 @@ public class HelloController implements Initializable {
     }
 
     private void fabriqueDonnees() {
-        conversionDevices.add(new ConversionDevice("Euro/Dollars", "Euro", "Dollars", 1.11));
-        conversionDevices.add(new ConversionDevice("Dollars/Euro", "Dollars", "Euro", 1.11));
+        conversionDevices.add(new ConversionDevice("Euro/Dollars", "Euro", "Dollars", 1.08));
+        conversionDevices.add(new ConversionDevice("Dollars/Euro", "Dollars", "Euro", 1.08));
     }
 
     private void initConvertion(ConversionDevice conversionDevice) {

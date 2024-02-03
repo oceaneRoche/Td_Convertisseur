@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="569.0" stylesheets="@../../../appstyle/css.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.btsciel.td_convertisseur.HelloController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="569.0" stylesheets="@../../../appstyle/css.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.btsciel.td_convertisseur.HelloController">
 <Button fx:id="boutonConvertion" layoutX="114.0" layoutY="224.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="61.0" stylesheets="@../../../appstyle/css.css" />
 <TextField fx:id="textField_Haut" layoutX="48.0" layoutY="164.0" prefHeight="46.0" prefWidth="190.0">
    <font>
@@ -16,15 +17,15 @@
    <font>
       <Font name="System Bold" size="12.0" />
    </font></TextField>
-<Label fx:id="label_Haut" layoutX="251.0" layoutY="164.0" prefHeight="46.0" prefWidth="43.0">
+<Label fx:id="label_Haut" layoutX="251.0" layoutY="164.0" prefHeight="46.0" prefWidth="43.0" textFill="WHITE">
    <font>
       <Font name="System Bold" size="12.0" />
    </font></Label>
-<Label fx:id="label_Bas" layoutX="251.0" layoutY="309.0" prefHeight="45.0" prefWidth="68.0">
+<Label fx:id="label_Bas" layoutX="251.0" layoutY="309.0" prefHeight="45.0" prefWidth="68.0" textFill="WHITE">
    <font>
       <Font name="System Bold" size="12.0" />
    </font></Label>
-<Label layoutX="305.0" prefHeight="84.0" prefWidth="264.0" text="Convertisseur Monetaire">
+<Label layoutX="162.0" layoutY="43.0" prefHeight="84.0" prefWidth="264.0" text="Convertisseur Monetaire" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
    <font>
       <Font name="System Bold" size="22.0" />
    </font>
